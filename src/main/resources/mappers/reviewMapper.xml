@@ -21,4 +21,45 @@
 		WHERE
 			`id` = #{id}
 	</select>
+	
+	<insert id="insertReview" parameterType="map">
+		Insert
+			`new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+		)
+		Value
+		(
+			#{storeId}
+			,#{menu}
+			,#{userName}
+			,#{point}
+			,#{review}
+		)
+	</insert>
+	
+	<insert id="insertReviewByObject" parameterType="com.jinu.spring.ex.mybatis.domain.Review">
+		Insert
+			`new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+		)
+		Value
+		(
+			#{storeId}
+			, #{menu}
+			, #{userName}
+			, #{point}
+			, #{review}
+		)
+	</insert>	
+	
 </mapper>
