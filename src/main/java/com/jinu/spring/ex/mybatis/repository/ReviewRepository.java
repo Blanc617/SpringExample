@@ -21,7 +21,6 @@ public interface ReviewRepository {
 			, @Param("review")String review);
 	
 	// 리뷰 테이블에 한행 저장에 필요한 정보를 객체로 전달 받고 한행을 insert
-	
 	public int insertReviewByObject(Review review);
 	
 }
